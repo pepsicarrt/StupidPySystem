@@ -1,6 +1,7 @@
 import random
 import time
 import os
+import tkinter
 
 somethingrandom = ["Pycharm", "Zen", "Firefox", "Rufus", "qBittorrent", "Steam", "Parsec", "1.1.1.1 (Warp)",
                    "VLC Media Player", "Retrobar", ]
@@ -10,7 +11,7 @@ while not quit:
     user = input("> ").lower().strip()
 # This is the Help command.
     if user == "help":
-        print("could you like specify what you need help with")
+        print("StupidPySystem Help\nReport any bugs you find!")
         user = input("help> ").lower().strip()
         if user == "program":
             print(
@@ -23,9 +24,9 @@ while not quit:
             print("Disk Management\n// Opens Disk Management\nAA")
         elif user == "spsver":
             print("SPS Ver\n// Just tells you the version of SPS")
-        elif user == ("winver"):
+        elif user == "winver":
             print("winver\n// Opens winver")
-        elif user == ("msinfo32"):
+        elif user == "msinfo32":
             print("msinfo32\n// Opens msinfo32")
         elif user == "quit":
             print("Quit\n// Quits SPS")
@@ -39,7 +40,15 @@ while not quit:
         os.system("cmd")
         quit = True
     elif user == "spsver":
-        print("StupidPySystem\n// Version 1B\n// Windows Build\n// made by @pepsicart on Discord\n// pepsicarrt on GitHub")
+        # I present, Code that most likely sucks because I followed a really bad guide!
+        spsversion = tkinter.Tk()
+
+        spsversion.title("spsver")
+        tkinter.Label(spsversion, text="StupidPySystem").pack()
+        tkinter.Label(spsversion, text="Version 1 Beta\nWindows Build\nMade by @pepsicart on Discord\npepsicarrt on Github").pack()
+        spsversion.minsize(220, 100)
+        spsversion.maxsize(220, 100)
+        spsversion.mainloop()
     elif user == "winver":
         os.system("winver")
     elif user == "msinfo32":
@@ -53,3 +62,5 @@ while not quit:
         os.system("diskmgmt.msc")
     elif user == "quit":
         quit = True
+    else:
+        print("That command doesn't exist yet, Check help for all of the commands.")
