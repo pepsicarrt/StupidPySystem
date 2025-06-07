@@ -63,7 +63,7 @@ while not quit:
         print("close Disk Management to continue using SPS")
         os.system("diskmgmt.msc")
     elif user == "ping":
-        user = input("what do you want to ping: ")
+        user = input("What do you want to ping?\nping> ")
         os.system("ping "+user)
     elif user == "quit":
         quit = True
