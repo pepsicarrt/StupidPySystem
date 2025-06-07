@@ -30,6 +30,8 @@ while not quit:
             print("msinfo32\n// Opens msinfo32")
         elif user == "quit":
             print("Quit\n// Quits SPS")
+        elif user == "ping":
+            print("Ping\n// Uses the built in Ping command for whatever operating system you're using")
         else:
             print("Command doesn't exist.")
 # All of the Commands
@@ -60,6 +62,9 @@ while not quit:
     elif user == "diskmgmt":
         print("close Disk Management to continue using SPS")
         os.system("diskmgmt.msc")
+    elif user == "ping":
+        user = input("what do you want to ping: ")
+        os.system("ping "+user)
     elif user == "quit":
         quit = True
     else:
