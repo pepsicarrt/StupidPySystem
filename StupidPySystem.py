@@ -3,8 +3,6 @@ import time
 import os
 import tkinter
 
-somethingrandom = ["Pycharm", "Zen", "Firefox", "Rufus", "qBittorrent", "Steam", "Parsec", "1.1.1.1 (Warp)",
-                   "VLC Media Player", "Retrobar", ]
 
 quit = False
 while not quit:
@@ -13,9 +11,8 @@ while not quit:
     if user == "help":
         print("StupidPySystem Help\nReport any bugs you find!")
         user = input("help> ").lower().strip()
-        if user == "program":
-            print(
-                "Program\nVersion 1\n// Tells you a random program from a small list\n// Run using the command 'Program'")
+        if user == "exit":
+            print("Exiting Help")
         elif user == "cmd":
             print("Command Prompt\n// Opens the Command Prompt (cmd)\n// Quits SPS")
         elif user == "powershell":
@@ -35,8 +32,6 @@ while not quit:
         else:
             print("Command doesn't exist.")
 # All of the Commands
-    elif user == "program":
-        print(random.choice(somethingrandom))
     elif user == "cmd":
         print("opening cmd")
         os.system("cmd")
