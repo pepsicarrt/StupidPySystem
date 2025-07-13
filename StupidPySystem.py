@@ -1,11 +1,9 @@
-import random
-import time
-import os
-import tkinter
+import random, time, os, tkinter, requests
 
 
 quit = False
 while not quit:
+    print("StupidPySystem Ver1\nPlease look at the first time guide before using")
     user = input("> ").lower().strip()
 # This is the Help command.
     if user == "help":
@@ -38,6 +36,7 @@ while not quit:
         quit = True
     elif user == "spsver":
         # I present, Code that most likely sucks because I followed a really bad guide!
+        # Edit: It still sucks, I might change to customtkinter sometime in the near future
         spsversion = tkinter.Tk()
 
         spsversion.title("spsver")
