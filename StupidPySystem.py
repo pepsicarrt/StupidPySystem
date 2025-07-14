@@ -1,9 +1,11 @@
 import random, time, os, tkinter, requests
 
-
+boot = False
 quit = False
-while not quit:
+if boot == False:
     print("StupidPySystem Ver1\nPlease look at the first time guide before using")
+    boot = True
+while not quit:
     user = input("> ").lower().strip()
 # This is the Help command.
     if user == "help":
@@ -41,7 +43,7 @@ while not quit:
 
         spsversion.title("spsver")
         tkinter.Label(spsversion, text="StupidPySystem").pack()
-        tkinter.Label(spsversion, text="Version 1 Beta\nWindows Build\nMade by @pepsicart on Discord\npepsicarrt on Github").pack()
+        tkinter.Label(spsversion, text="Version 1 Beta\nWindows Build\nMade by @pepsicart. on Discord\npepsicarrt on Github").pack()
         spsversion.minsize(220, 100)
         spsversion.maxsize(220, 100)
         spsversion.mainloop()
@@ -57,6 +59,9 @@ while not quit:
         print("close Disk Management to continue using SPS")
         os.system("diskmgmt.msc")
     elif user == "ping":
+        # This command is due for a major rework sometime in the future
+        # Currently it uses the standard Ping command in Windows
+        print("This command is due for a major rework\nCurrently it uses the standard Ping command in Windows")
         user = input("What do you want to ping?\nping> ")
         os.system("ping "+user)
     elif user == "quit":
