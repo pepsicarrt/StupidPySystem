@@ -8,7 +8,7 @@ while True:
     user = input("> ").lower().strip()
     # This is the Help command.
     if user == "help":
-        print("StupidPySystem Help\nReport any bugs you find!")
+        print("StupidPySystem Help (++ to close)\nReport any bugs you find!")
         while True:
             user = input("help> ").lower().strip()
             if user == "cmd":
@@ -34,6 +34,8 @@ while True:
     # All of the Commands
     elif user == "cmd":
         print("opening cmd")
+        time.sleep(2)
+        os.system("cls")
         os.system("cmd")
         break
     elif user == "spsver":
@@ -52,6 +54,8 @@ while True:
         os.system("msinfo32")
     elif user == "powershell":
         print("opening powershell\nmight take some time")
+        time.sleep(2)
+        os.system("cls")
         os.system("powershell")
         break
     elif user == "diskmgmt":
