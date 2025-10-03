@@ -6,7 +6,7 @@ spshelp = 0
 print("StupidPySystem Ver1\nPlease look at the first time guide before using")
 while True:
     user = input("> ").lower().strip()
-    # This is the Help command.
+    # The help command.
     if user == "help":
         print("StupidPySystem Help (++ to close)\nReport any bugs you find!")
         while True:
@@ -31,7 +31,7 @@ while True:
                 break
             else:
                 print("Command doesn't exist.")
-    # All of the Commands
+    # All of the Commands.
     elif user == "cmd":
         print("opening cmd")
         time.sleep(2)
